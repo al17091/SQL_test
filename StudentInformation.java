@@ -8,7 +8,7 @@ class StudentInformation{
     /*認証処理*/
     public static int logIn(String id, String pass){
 	//学生情報DBにidとpass出力
-	ServerConnect.st = ServerConnect.connect();
+	ServerConnect.connect();
 	int i = LoadDriver.readDB(id,pass,ServerConnect.st);
 	//IDがデータベースに存在しないi=0
 	//passが不一致i=0
