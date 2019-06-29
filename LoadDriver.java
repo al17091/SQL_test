@@ -127,7 +127,7 @@ public class LoadDriver{
 		while( result.next() )
 		    {
 			String student_id = result.getString( "student_id" );
-			if(student_id == id){
+			if(student_id.equals(id)){
 			    String bank = result.getString( "bank" );
 			    list.add(bank);
 			    break;
@@ -200,7 +200,7 @@ public class LoadDriver{
 	    /*sqlコンテナの役割を果たすオブジェクトに渡すためのStatementオブジェクトを作成する。*/
 	    //Statement st = con.createStatement();
 	        
-	    String sqlStr = "SELECT student_id,pass_word FROM student.Table_Table_student_name";
+	    String sqlStr = "SELECT student_id,pass_word FROM student.Table_student_name";
 	    ResultSet result = st.executeQuery( sqlStr );
 	        
 	    while( result.next() )
@@ -286,5 +286,15 @@ public class LoadDriver{
 	}catch (Exception ex){
 	    ex.printStackTrace();    
 	}
-    }
+	}
+	
+	public static void writeDB(Statement st,String id,int point){
+		try {
+			System.out.println(id+""+point);
+			String sqlStr = "UPDATE student.Table_student_data SET bank=point WHERE student_id=id";
+			st.executeUpdate(sqlStr);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 }

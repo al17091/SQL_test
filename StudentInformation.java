@@ -14,7 +14,7 @@ class StudentInformation{
 	//passが不一致i=0
 	if(i==0) return 0;
 	else return 1;
-    }
+	}
     
     /*注文処理*/
     public static int orderProcessing(int menu_point,String id){
@@ -33,10 +33,10 @@ class StudentInformation{
 	
 	//学生情報DBから残高をpointに代入
 	
-	List<String> value = new ArrayList<String>();
-	value = LoadDriver.readDB(2,id,ServerConnect.st);
+	List<String> value = LoadDriver.readDB(2,id,ServerConnect.st);
 	int point = Integer.parseInt(value.get(0));
 	point += Deposit_point;
+	LoadDriver.writeDB(ServerConnect.st,id,point);
 	return point;
     }
     
