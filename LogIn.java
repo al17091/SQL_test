@@ -10,11 +10,9 @@ class LogIn{
 	//state==0：認証不可 state==1：認証成功
 	if(state==0){
 		/*認証不可MをUIに出力*/
-		System.out.println("no");
 	}
 	if(state==1){
 		//ホーム画面に遷移
-		System.out.println("yes");
 	}
     }
 }
