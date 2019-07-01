@@ -246,7 +246,7 @@ public static void writeDB(String id,int money,Statement stt){
 		String sqlStr = "UPDATE student.Table_student_history SET amount=? WHERE student_id=?";
 		st = ServerConnect.con.prepareStatement(sqlStr);
 		st.setInt(1, money);
-		st.setString(2, id);
+		st.setString(2, id); //1と2たぶんDBと逆
 	    st.executeUpdate();
 	    //st.close();
 	    //con.close();      
