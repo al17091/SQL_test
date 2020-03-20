@@ -1,7 +1,0 @@
-﻿javaを実行するにはCLASSPATHの設定がいる。
-ターミナル上でsetenv CLASSPATH .:./mysql-connector-5.1.45.jarを実行する
-ただし、実行ファイルとJDBCドライバは同一ディレクトリにあること前提で書いているため、違う場合はCLASSPATHの設定を各自で変えるように。
-ターミナル切るとCLASSPATHの設定が消えます。間違いなく。
-
-常時CLASSPATHを設定するようにするのは検討中。
-テストだからやらなくてもよくね。byばい
